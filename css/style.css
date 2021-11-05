@@ -1,6 +1,28 @@
-/* &display=swap&subset=cyrillic-ext */
 
-/* ОБНУЛЕНИЕ СТИЛЕЙ */
+
+
+/*    * &display=swap&subset=cyrillic-ext    */
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap&subset=cyrillic-ext");
+
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/Lato-Regular.woff2') format('woff2'), url('../fonts/Lato-Regular-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+ }
+ @font-face {
+	font-family: 'Lato';
+	src: url('../fonts/Lato-Regular-Bold.woff2') format('woff2'),url('../fonts/Lato-Regular-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+ }
+ 
+/*                 Обнулення                      */
 *,
 *::before,
 *::after {
@@ -9,6 +31,7 @@
 	border: 0;
 	box-sizing: border-box;
 }
+
 li {
 	list-style: none;
 }
@@ -32,209 +55,191 @@ img {
 	vertical-align: top;
 }
 html,
-body {
+body{
 	height: 100%;
 }
 html {
-	font-size: 16px; /* по умолчанию */
+	font-size: 16px; /* по умолчанию 16px*/
 }
 body {
 	line-height: 1;
 }
-.wrapper {
+.wrapper{
 	min-height: 100%;
 	overflow: hidden;
 }
-/* ------------------------------ */
-/* Отступы */
-/* По другому работают для строчного объекта*/
 
-/* Внутренние */
-/*
-padding
-Внутренний отступ элемента
-При указании поля в процентах, значение считается 
-от ширины родителя элемента.
-Свойство не наследуется.
+/*                   Обнулення                           */
 
-padding: со_всех_сторон;
-padding: сверху справа снизу слева;
-padding: сверху_снизу справа_слева;
-padding: сверху справа_слева снизу;
-
-*/
-
-/* Внешние */
-/*
-margin
-Внешний отступ элемента
-При указании поля в процентах, значение 
-считается от ширины родителя элемента.
-Свойство не наследуется.
-Значение может быть как положительным, 
-так и отрицательным числом.
-
-margin: со_всех_сторон;
-margin: сверху справа снизу слева;
-margin: сверху_снизу справа_слева;
-margin: сверху справа_слева снизу;
-*/
-
-.block {
-	background-color: green;
-
-	color: #fff;
-	font-size: 30px;
-	margin: 50px;
-	padding: 30px;
+.wrapper{
+	background-color: #B9BAC5;
 }
-.inline {
-	background-color: #794f45;
-	color: #fff;
-	font-size: 30px;
-	width: 500px;
-	padding: 50px;
-	margin: 50px;
-}
-
-.image {
-	width: 50%;
-	padding: 50px;
-	background-color: #000;
-}
-
-/*
-.block_2 {
-	background-color: #77608d;
-
-	color: #fff;
-	font-size: 50px;
-	padding: 50px;
-}
-.block_3 {
-	background-color: #794f45;
-	padding: 50px;
-
-	color: #fff;
-	font-size: 50px;
-	padding: 50px;
-}
-*/
-/* НЕ работают для строчного объекта*/
-/*
-width
-Устанавливает ширину блочных тегов и блочно-строчных
-Свойство не наследуется.
-width:100px;
-width:10%;
-*/
-
-.block {
-	/* width: 500px; */
-}
-
-/*
-box-sizing
-Применяется для изменения алгоритма расчета ширины 
-и высоты элемента. 
-Свойство наследуется.
-content-box - Основывается на стандартах CSS, при этом 
-свойства width и height задают ширину и высоту контента
- и не включают в себя значения отступов, полей и границ.
-border-box - Свойства width и height включают в себя 
-значения полей и границ, но не отступов (margin). Эта модель используется браузером Internet Exporer в режиме несовместимости.
-padding-box - Свойства width и height включают в себя
- значения полей, но не отступов (margin) и границ (border). 
-
-*/
-
-/*
- Центрирование объекта с помощью  margin со значениями auto:last-child
- 1) Объект должен быть блочным
- 2) Объект должен быть ограничен по ширине, быть уже чем родитель
- 3) margin: 0px auto;
-*/
-
-.block {
-	/* margin: 0px auto; */
-}
-
-/*
-max-width
-Устанавливает максимальную ширину блочных 
-и блочно-строчных тегов
-
-min-width
-Устанавливает минимальную ширину блочных 
-и блочно-строчных тегов
-*/
-
-.block {
-	/*
-	max-width: 700px;
-	margin: 0px auto;
-	*/
-}
-
-/*
-height:
-Устанавливает высоту блочных и блочно-строчных тегов
-Свойство не наследуется.
-height:100px;
-height:10%;
-
-min-height
-Свойство не наследуется.
-
-max-height
-Свойство не наследуется.
-*/
-
-.block {
-	/* height: 500px; */
-}
-
-/*
-overflow 
-Управляет отображением содержания блочного элемента
-visible - Отображается все содержание элемента, даже за пределами установленной высоты и ширины. 
-hidden - Отображается только область внутри элемента, остальное будет скрыто.
-scroll - Всегда добавляются полосы прокрутки.
-auto - Полосы прокрутки добавляются только при необходимости.
-*/
-
-.block {
-	/* overflow: hidden; */
-}
-
-/*
-display:
-Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе.
-Свойство не наследуется.
-
-block - Элемент показывается как блочный. Применение этого значения для встроенных элементов, например тега <span>, заставляет его вести подобно блокам — происходит перенос строк в начале и в конце содержимого. 											
-inline - Элемент отображается как встроенный. Использование блочных тегов, таких как <div> и <p>, автоматически создает перенос и показывает содержимое этих тегов с новой строки. Значение inline отменяет эту особенность, поэтому содержимое блочных элементов начинается с того места, где окончился предыдущий элемент. 											
-inline - block - Это значение генерирует блочный элемент, который обтекается другими элементами веб-страницы подобно встроенному элементу. Фактически такой элемент по своему действию похож на встраиваемые элементы (вроде тега <img>). При этом его внутренняя часть форматируется как блочный элемент, а сам элемент — как встроенный. 											
-none - Временно удаляет элемент из документа. Занимаемое им место не резервируется и веб-страница формируется так, словно элемента и не было. 
-*/
-
-.link {
-	font-size: 80px;
-	color: red;
-	margin: 0px 0px 100px 0px;
-	/* По умолчанию */
-	display: inline;
-}
-
 .header {
-	/* По умолчанию */
+	box-shadow: 1px 1px 10px inset rgba(35, 70, 70, 0.287);
+	border-radius: 10px ;
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff; 
+	border-left: 1px solid #fff;
+	background-color: #e1e1e4;
+	margin: 20px 20px 20px 20px; 
+	height: 60px;
+	background-color: #E1E1E4;
+}
+
+.fone_title{
+	text-align: center;
+	margin: -82px 20px 0px 20px;
+	font-size: 120px;
+	font-weight: 900;
+	color: rgba(0, 0, 0, 0.041);
+	text-transform: uppercase;
+	text-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
+}
+.head_title{
+	font-size: 25px;
+	padding: 15px 0px 0px 0px;
+	margin: 0px 0px 20px 20px;
+	text-transform: capitalize; 
+	text-shadow: 0px 0px 5px darkred;
+}
+
+.nav_box{
+	text-align: right;
+	margin: -55px 20px 0px 0px;
+	padding: 0px 5px 0px 0px;
+	color: darkgray;
+
+}
+.link{
+	color: darkgreen;
+}
+.nav_link{
+	background-color: rgba(148, 99, 99, 0);
 	display: block;
+	color: red; 
+	text-transform: capitalize; 
 }
-.image {
-	/* По умолчанию */
+.content{
+	background: #b5afe9;
+	margin: 0px 20px 0px 20px;
+	padding: 10px 0px 0px 0px;
+	border-top: 1px solid #fff;
+}
+.main_block {
+	display: block;
+	text-align: center;
+	margin: 0px 0px 10px 0px;
+	text-decoration: underline;
+}
+.ablock {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	margin: 0px 0px 30px 0px;
+
+}
+.block_body{
+	padding: 10px;
+	box-sizing: border-box;
+
+
+}
+.block_item{
 	display: inline-block;
+	max-width: 200px;
+	max-height: 200px;
+	overflow: auto;
+	padding: 15px;
+	text-align: justify;
 }
-.text {
-	/* display: none; */
-	font-size: 50px;
+
+.work-title {
+	display: block;
+	background-color: rgba(138, 35, 35, 0);
+	margin: 0px 0px 30px 0px;
+
+}
+.title-body {
+	text-align: center;
+
+}
+
+.body-link {
+	color: #fff;
+	display: inline-block;
+	background-color: rgb(54, 142, 148);
+
+}
+
+.task-title {
+	display: block;
+	background-color: rgba(255, 99, 71, 0);
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 700;
+	color: rgba(53, 107, 91, 0.671);
+	 margin: 0px 0px 0px 0px ;
+	 padding: 10px 0px 10px 0px ;
+	 border-top: 1px solid white;
+}
+.task-body {
+		margin: 0px 0px 0px 0px ;
+		border-bottom: 1px solid white;
+
+}
+.task-text {
+	display: inline-block;
+	max-width: 100px;
+	font-size: 16px;
+	padding: 10px;
+	margin: 0px 30px 0px 0px ;
+	text-align: justify;
+	text-shadow: 0px 0px 5px  white;
+}
+.text-title{
+	display: block;
+	background-color: rgba(255, 99, 71, 0);
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 700;
+	color: rgba(53, 107, 91, 0.671);
+	 margin: -25px 0px 0px 0px ;
+}
+.text-one{
+	text-indent: 20px;
+	background-color: rgb(123, 144, 143);
+	line-height: 30px;
+	padding: 30px ;
+	border-bottom: 1px solid white;
+}
+.text-two {
+	text-indent: 20px;
+	background-color: rgba(165, 42, 42, 0.568);
+	margin: -20px 0px 20px 0px ;
+	line-height: 30px;
+	max-width: 750px;
+	padding: 20px 0px 10px 0px ;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	padding: 30px ;
+
+}
+
+.footer {
+	margin: 0px 0px 0px 0px ;
+	background-color: rgb(9, 17, 17);
+	color: cadetblue;
+
+
+}
+.text-span {
+	display: inline-block;
+	padding: 5px 20px 20px 20px ;
+	max-height: 200px;
+	overflow-y: auto;
+	text-align: justify;
+	text-indent: 20px;
+
 }
